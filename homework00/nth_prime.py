@@ -31,5 +31,4 @@ def nth_prime(n):
 if __name__ == "__main__":
     while True:
         n = int(input('> '))
-
         print(nth_prime(n))

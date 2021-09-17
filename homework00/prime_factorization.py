@@ -12,6 +12,8 @@ def is_prime(n):
 
 def prime_factorization(n):
     factors = []
+    if n < 2:
+        return []
     while not is_prime(n):
         i = 2
         while i < int(math.sqrt(n) + 1):
@@ -20,7 +22,7 @@ def prime_factorization(n):
                 n = n / i
                 i = 2
             else:
-                i += 1
+                i = i + 1
     factors.append(int(n))
     return factors
 
